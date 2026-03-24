@@ -1,6 +1,6 @@
 'use strict';
 
-L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
+export var HeatLayer = L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
 
     // options: {
     //     minOpacity: 0.05,
@@ -215,3 +215,7 @@ L.HeatLayer = (L.Layer ? L.Layer : L.Class).extend({
 L.heatLayer = function (latlngs, options) {
     return new L.HeatLayer(latlngs, options);
 };
+
+export function heatLayer(latlngs, options) {
+  return new HeatLayer(latlngs, options);
+}
